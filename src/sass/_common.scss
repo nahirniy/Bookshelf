@@ -1,1 +1,79 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+$main-cl: #f6f6f6;
+$accent-cl: #4f2ee8;
+$black-cl: #111111;
+$white-cl: #ffffff;
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./fonts/DMSans-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./fonts/DMSans-Bold.woff2');
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans';
+  background-color: $main-cl;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  font-family: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+.container {
+  max-width: 375px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

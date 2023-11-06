@@ -1,0 +1,134 @@
+aside {
+	padding: 40px 0;
+}
+
+.category {
+	margin-bottom: 40px;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		max-height: 228px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		scrollbar-color: #e0e0e0 transparent;
+
+		&::-webkit-scrollbar {
+			width: 8px;
+		}
+
+		&::-webkit-scrollbar-track {
+			border-radius: 12px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			height: 114px;
+			background-color: #e0e0e0;
+			border-radius: 12px;
+		}
+	}
+
+	&__item .active {
+		color: $accent-cl;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	&__btn {
+		color: rgba(17, 17, 17, 0.6);
+		line-height: 1.13;
+		letter-spacing: -0.02em;
+		transition: color 300ms ease-in-out;
+
+		&:hover,
+		&:focus {
+			color: $accent-cl;
+		}
+	}
+}
+
+.support {
+	border-radius: 16px;
+	background: radial-gradient(
+		189.32% 190.93% at 59.76% -23.42%,
+		#4f2ee8 18.03%,
+		#fff 100%
+	);
+	box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
+	padding: 24px 40px 20px 40px;
+
+	&__head {
+		display: flex;
+		gap: 12px;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 40px;
+	}
+
+	&__header {
+		color: $white-cl;
+		font-size: 22px;
+		line-height: 1.09;
+		letter-spacing: -0.04em;
+	}
+
+	&__icon-ua {
+		fill: $white-cl;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: flex-start;
+		max-height: 292px;
+		overflow: hidden;
+		margin-bottom: 20px;
+		scroll-behavior: smooth;
+	}
+
+	&__item {
+		display: flex;
+		gap: 16px;
+		align-items: center;
+	}
+
+	&__index {
+		color: $white-cl;
+		font-size: 14px;
+		line-height: 1.29;
+		letter-spacing: -0.04em;
+	}
+
+	&__link {
+		height: 32px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__image {
+		filter: brightness(0) invert(1);
+		max-height: 32px;
+	}
+
+	&__btn {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		background-color: $white-cl;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 300ms ease-in-out;
+	}
+
+	.expand-list {
+		transform: rotate(180deg);
+	}
+
+	&__icon-arrow {
+		fill: $accent-cl;
+	}
+}
