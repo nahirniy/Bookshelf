@@ -1,5 +1,7 @@
 export const refs = {
 	// Header
+	scrollBtn: document.querySelector('.header__scroll-btn'),
+
 	// Sidebar
 	categoryList: document.querySelector('.category__list'),
 	supportList: document.querySelector('.support__list'),

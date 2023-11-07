@@ -1,7 +1,7 @@
 import { refs } from '../../refs';
 import { bestsellersContent, categoryContent } from '../home-content';
 
-const { booksContent, categoryList } = refs;
+const { categoryList } = refs;
 let prevCategory = '';
 
 export function handleContent(e) {
@@ -15,7 +15,6 @@ export function handleContent(e) {
 	currentCategory !== 'bestsellers' ? categoryContent(currentCategory) : bestsellersContent();
 	prevCategory = currentCategory;
 	changeActiveCategory(currentCategory);
-	scrollToStart();
 }
 
 function changeActiveCategory(currentItem) {
@@ -26,11 +25,12 @@ function changeActiveCategory(currentItem) {
 
 	activeBtn.classList.add('active');
 	prevActiveBtn.classList.remove('active');
+
+	scrollToStart(activeBtn);
 }
 
-function scrollToStart() {
-	const title = booksContent.querySelector('.books__title');
-	title.scrollIntoView({ behavior: 'smooth' });
+function scrollToStart(activeBtn) {
+	activeBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 bestsellersContent();

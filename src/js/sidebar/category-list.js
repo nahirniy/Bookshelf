@@ -1,4 +1,4 @@
-import { getBooks } from '../helpers/books-api';
+import { getBooks } from '../services/books-api';
 import { refs } from '../refs';
 
 const { categoryList } = refs;
@@ -19,6 +19,7 @@ async function createItem() {
 		.join('');
 
 	categoryList.insertAdjacentHTML('beforeend', categoryItem);
+	categoryList.scrollTop = 0;
 }
 
 createItem();

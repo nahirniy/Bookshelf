@@ -4,7 +4,7 @@ import { refs } from '../refs';
 const { supportList, supportBtn } = refs;
 
 function createMarkup(link, { dekstop, mobile }, description, index) {
-  return `<li class="support__item">
+	return `<li class="support__item">
     <span class="support__index"> ${index < 10 ? '0' + index : index}</span>
     <a href="${link}" class="support__link" target="_blank">
       <img
@@ -18,19 +18,18 @@ function createMarkup(link, { dekstop, mobile }, description, index) {
 }
 
 function createItem() {
-  const supportItem = fonds
-    .map(({ title, url, img }, index) => createMarkup(url, img, title, index + 1))
-    .join('');
+	const supportItem = fonds
+		.map(({ title, url, img }, index) => createMarkup(url, img, title, index + 1))
+		.join('');
 
-  supportList.insertAdjacentHTML('beforeend', supportItem);
+	supportList.insertAdjacentHTML('beforeend', supportItem);
 }
 
 function handleSrcoll() {
-  supportBtn.classList.toggle('expand-list');
+	supportBtn.classList.toggle('expand-list');
 
-  const scrollDown = supportList.scrollHeight - supportList.clientHeight;
-
-  supportList.scrollTop = supportBtn.classList.contains('expand-list') ? scrollDown : 0;
+	const scrollDown = supportList.scrollHeight - supportList.clientHeight;
+	supportList.scrollTop = supportBtn.classList.contains('expand-list') ? scrollDown : 0;
 }
 
 supportBtn.addEventListener('click', handleSrcoll);
