@@ -21,17 +21,4 @@ async function createItem() {
 	categoryList.insertAdjacentHTML('beforeend', categoryItem);
 }
 
-function handleActive(e) {
-	const currentBtn = e.target;
-	const activeBtn = categoryList.querySelector('.active');
-
-	if (!currentBtn.classList.contains('category__btn')) {
-		return;
-	}
-
-	activeBtn.classList.remove('active');
-	currentBtn.classList.add('active');
-}
-
-categoryList.addEventListener('click', handleActive);
 createItem();

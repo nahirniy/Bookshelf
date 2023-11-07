@@ -1,5 +1,5 @@
-aside {
-	padding: 40px 0;
+.aside {
+	padding-top: 40px;
 }
 
 .category {
@@ -50,11 +50,7 @@ aside {
 
 .support {
 	border-radius: 16px;
-	background: radial-gradient(
-		189.32% 190.93% at 59.76% -23.42%,
-		#4f2ee8 18.03%,
-		#fff 100%
-	);
+	background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4f2ee8 18.03%, #fff 100%);
 	box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
 	padding: 24px 40px 20px 40px;
 
