@@ -1,0 +1,120 @@
+.modal-backdrop {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 998;
+	background: rgba(46, 47, 66, 0.65);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 300ms ease-in-out;
+}
+
+.modal-book {
+	width: 335px;
+	height: 762px;
+	padding: 40px 24px;
+	border-radius: 18px;
+	border: 2px solid $black-cl;
+	background-color: $white-cl;
+	position: relative;
+	transition: all 300ms ease-in-out;
+	opacity: 0;
+
+	&__close-btn {
+		position: absolute;
+		top: 12;
+		right: 12;
+
+		&:hover .modal-book__close-icon,
+		&:focus .modal-book__close-icon {
+			stroke: $accent-cl;
+		}
+	}
+
+	&__close-icon {
+		stroke: $black-cl;
+		transition: all 300ms ease-in-out;
+	}
+
+	&__image {
+		border-radius: 8px;
+		margin-bottom: 14px;
+		width: 287px;
+		height: 408px;
+	}
+
+	&__info {
+		margin-bottom: 34px;
+	}
+
+	&__title {
+		color: $black-cl;
+		font-size: 16px;
+		line-height: 1.13;
+		letter-spacing: -0.04em;
+		margin-bottom: 4px;
+	}
+
+	&__author {
+		color: $grey-cl;
+		display: block;
+		font-size: 12px;
+		font-style: italic;
+		font-weight: 400;
+		line-height: 1.17;
+		letter-spacing: -0.04em;
+		margin-bottom: 18px;
+	}
+
+	&__description {
+		color: $black-cl;
+		font-size: 14px;
+		line-height: 1.29;
+		letter-spacing: -0.04em;
+		margin-bottom: 14px;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__link {
+		display: block;
+		transition: all 300ms ease-in-out;
+
+		&:hover,
+		&:focus {
+			transform: scale(1.1);
+		}
+	}
+
+	&__img-company {
+		filter: grayscale(100%);
+	}
+
+	&__toggle-btn {
+		padding: 14px 28px;
+		color: $black-cl;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 1.29;
+		letter-spacing: -0.01em;
+		text-transform: uppercase;
+		border-radius: 40px;
+		border: 2px solid $accent-cl;
+		display: block;
+		margin: 0 auto;
+		transition: all 300ms ease-in-out;
+
+		&:hover,
+		&:focus {
+			background-color: $accent-cl;
+			color: $white-cl;
+		}
+	}
+}

@@ -1,0 +1,136 @@
+.mobile-menu {
+	height: 100%;
+	width: 100%;
+	background: radial-gradient(
+		189.32% 190.93% at 59.76% -23.42%,
+		$accent-cl 18.03%,
+		$white-cl 100%
+	);
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	right: -100%;
+	transition: all 300ms ease-in-out;
+	padding: 88px 0 20px;
+
+	&::before {
+		content: '';
+		background-image: url(../images/mobile-menu/books-background@2x.webp);
+		background-repeat: no-repeat;
+		background-position: bottom;
+		position: absolute;
+		background-size: contain, 370px;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		bottom: 0;
+	}
+
+	&__wrapper {
+		max-width: 375px;
+		padding: 0 20px;
+		margin: 0 auto;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__sing-up {
+		background-color: $accent-cl;
+		color: $white-cl;
+		max-width: 184px;
+		margin-bottom: 126px;
+		display: flex;
+		gap: 90px;
+		padding: 14px 15px;
+		align-items: center;
+
+		&:hover {
+			background-color: $white-cl;
+			color: $black-cl;
+		}
+	}
+
+	&__log-out {
+		background-color: $white-cl;
+		color: $black-cl;
+		margin-top: auto;
+		display: flex;
+		gap: 4px;
+		align-items: center;
+		padding: 15px 24px;
+		max-width: 118px;
+
+		&:hover {
+			background-color: $accent-cl;
+			color: $white-cl;
+		}
+	}
+
+	&__icon-arrow-right {
+		stroke: $yellow-cl;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		gap: 8px;
+	}
+
+	&__item {
+		font-size: 14px;
+		line-height: 1.29;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+	}
+
+	.current-link {
+		background-color: $yellow-cl;
+		font-weight: 700;
+		color: $black-cl;
+
+		.mobile-menu__icon-shop {
+			fill: $black-cl;
+		}
+	}
+
+	&__link {
+		padding: 8px 16px;
+		border-radius: 36px;
+		font-weight: 500;
+		transition: all 300ms ease-in-out;
+		color: $white-cl;
+
+		&:hover,
+		&:active {
+			color: $black-cl;
+			background-color: $yellow-cl;
+		}
+	}
+
+	.home-link {
+		display: block;
+		max-width: 72px;
+	}
+
+	.shopping-link {
+		display: flex;
+		gap: 4px;
+		align-items: center;
+		margin-left: -16px;
+
+		&:hover .mobile-menu__icon-shop {
+			fill: $black-cl;
+		}
+	}
+
+	&__icon-shop {
+		fill: $white-cl;
+		transition: all 300ms ease-in-out;
+	}
+}
+
+.active {
+	right: 0;
+}

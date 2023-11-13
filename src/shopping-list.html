@@ -3,22 +3,20 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Home</title>
+		<title>Shopping list</title>
 		<link rel="stylesheet" href="./sass/index.scss" />
-		<script type="module" src="./index.js"></script>
+		<script type="module" src="./shopping-list.js"></script>
 	</head>
 	<body>
 		<include src="./partials/components/header.html"></include>
 
 		<main>
-			<aside class="aside">
-				<include src="./partials/home/category-list.html"></include>
+			<!-- <aside class="aside">
 				<include src="./partials/components/support-list.html"></include>
-			</aside>
-			<include src="./partials/home/home-content.html"></include>
+			</aside> -->
+			<include src="./partials/shopping-list/shopping-list-content.html"></include>
 		</main>
 
 		<include src="./partials/components/mobile-menu.html"></include>
-		<include src="./partials/components/modal-book.html"></include>
 	</body>
 </html>

@@ -4,76 +4,105 @@ $main-cl: #f6f6f6;
 $accent-cl: #4f2ee8;
 $black-cl: #111111;
 $white-cl: #ffffff;
+$yellow-cl: #eac645;
+$grey-cl: #b4afaf;
 
 @font-face {
-  font-family: 'DM Sans';
-  src: url('./fonts/DMSans-Regular.woff2');
+	font-family: 'DM Sans';
+	src: url('./fonts/DMSans-Regular.woff2');
 }
 
 @font-face {
-  font-family: 'DM Sans';
-  src: url('./fonts/DMSans-Bold.woff2');
-  font-weight: 700;
+	font-family: 'DM Sans';
+	src: url('./fonts/DMSans-Medium.woff2');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'DM Sans';
+	src: url('./fonts/DMSans-Bold.woff2');
+	font-weight: 700;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  font-family: 'DM Sans';
-  background-color: $main-cl;
-  font-size: 16px;
-  font-weight: 400;
+	font-family: 'DM Sans';
+	background-color: $main-cl;
+	font-size: 16px;
+	font-weight: 400;
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 a {
-  color: currentColor;
-  text-decoration: none;
+	color: currentColor;
+	text-decoration: none;
 }
 
 button {
-  cursor: pointer;
-  font-family: inherit;
-  border: none;
-  background-color: transparent;
-  color: inherit;
+	cursor: pointer;
+	font-family: inherit;
+	border: none;
+	background-color: transparent;
+	color: inherit;
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 input {
-  font-family: inherit;
+	font-family: inherit;
 }
 
 address {
-  font-style: normal;
+	font-style: normal;
 }
 
 .container {
-  max-width: 375px;
-  padding: 0 20px;
-  margin: 0 auto;
+	max-width: 375px;
+	padding: 0 20px;
+	margin: 0 auto;
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.is-hidden {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.overflow-hide {
+	overflow: hidden;
+}
+
+.style-btn {
+	border-radius: 18px;
+	border: 1.5px solid $black-cl;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.29;
+	letter-spacing: -0.04em;
+	transition: all 300ms ease-in-out;
+	white-space: nowrap;
 }

@@ -45,6 +45,10 @@
 		gap: 40px;
 	}
 
+	&__item {
+		cursor: pointer;
+	}
+
 	&__bestsellers {
 		display: flex;
 		flex-direction: column;

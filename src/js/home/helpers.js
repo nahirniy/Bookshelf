@@ -1,5 +1,5 @@
-import { refs } from '../../refs';
-import { bestsellersContent, categoryContent } from '../home-content';
+import { refs } from '../refs';
+import { bestsellersContent, categoryContent } from './home-content';
 
 const { categoryList } = refs;
 let prevCategory = '';

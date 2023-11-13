@@ -23,6 +23,7 @@ function createItem() {
 		.join('');
 
 	supportList.insertAdjacentHTML('beforeend', supportItem);
+	supportList.scrollTop = 0;
 }
 
 function handleSrcoll() {

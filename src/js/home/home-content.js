@@ -1,7 +1,7 @@
 import { getBooks } from '../services/books-api';
-import { bestsellersMarkup, categoryMarkup } from './helpers/markup';
+import { bestsellersMarkup, categoryMarkup } from './markup';
 import { refs } from '../refs';
-import { handleContent } from './helpers/helpers';
+import { handleContent } from './helpers';
 
 const { booksContent, categoryList } = refs;
 

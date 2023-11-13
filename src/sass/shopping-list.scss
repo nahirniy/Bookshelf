@@ -1,0 +1,23 @@
+.favorite-books {
+	&__empty {
+		margin-top: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 14px;
+		&__text {
+			max-width: 244px;
+			color: rgba(0, 0, 0, 0.6);
+			text-align: center;
+			font-size: 14px;
+			line-height: 1.29;
+			letter-spacing: -0.02em;
+		}
+
+		&__image {
+			width: 265px;
+			height: 198px;
+		}
+	}
+}
