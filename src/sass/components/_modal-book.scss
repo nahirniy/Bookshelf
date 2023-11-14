@@ -14,7 +14,7 @@
 
 .modal-book {
 	width: 335px;
-	height: 762px;
+	min-height: 762px;
 	padding: 40px 24px;
 	border-radius: 18px;
 	border: 2px solid $black-cl;
@@ -97,7 +97,7 @@
 		filter: grayscale(100%);
 	}
 
-	&__toggle-btn {
+	&__switch-storage-btn {
 		padding: 14px 28px;
 		color: $black-cl;
 		font-size: 14px;
@@ -111,10 +111,26 @@
 		margin: 0 auto;
 		transition: all 300ms ease-in-out;
 
-		&:hover,
-		&:focus {
+		&:hover {
 			background-color: $accent-cl;
 			color: $white-cl;
 		}
+	}
+
+	.delete-btn {
+		padding: 14px 23px;
+		width: 279px;
+		white-space: nowrap;
+	}
+
+	&__purchase-text {
+		color: rgba(17, 17, 17, 0.5);
+		text-align: center;
+		font-size: 10px;
+		line-height: 1.2;
+		letter-spacing: -0.04em;
+		width: 242px;
+		margin: 8px auto 0;
+		display: none;
 	}
 }

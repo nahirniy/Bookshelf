@@ -14,6 +14,8 @@ async function openModal(e) {
 
 	createModal(bookId);
 	toggleModal('open');
+
+	document.addEventListener('keydown', closeModal);
 }
 
 function closeModal(e) {
@@ -24,20 +26,10 @@ function closeModal(e) {
 	if (e.key === 'Escape' && !modalBackdrop.classList.contains('is-hidden')) {
 		toggleModal('close');
 	}
+
+	document.removeEventListener('keydown', closeModal);
 }
-
-// function toggleItem(e) {
-// 	if (!e.target.classList.contains('modal-book__toggle-btn')) {
-// 		return;
-// 	}
-
-// 	console.log(e.target.closest('.books__item'));
-// }
-
-// modalBook.addEventListener('click', toggleItem);
 
 modalCloseBtn.addEventListener('click', () => toggleModal('close'));
 modalBackdrop.addEventListener('click', closeModal);
-document.addEventListener('keydown', closeModal);
-
 booksContent.addEventListener('click', openModal);

@@ -22,5 +22,6 @@ export const refs = {
 	modalBook: document.querySelector('.modal-book'),
 	modalBookInfo: document.querySelector('.modal-book__info'),
 	modalCloseBtn: document.querySelector('.modal-book__close-btn'),
-	modalToggleBtn: document.querySelector('.modal-book__toggle-btn'),
+	modalSwitchBtn: document.querySelector('.modal-book__switch-storage-btn'),
+	modalPurchaseText: document.querySelector('.modal-book__purchase-text'),
 };
