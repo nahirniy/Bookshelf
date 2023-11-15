@@ -1,1 +1,0 @@
-{"mappings":"oeAAAA,EAAA,S","sources":["src/shopping-list.js"],"sourcesContent":["import './js/services/scroll-up';\n// import './js/sidebar/support-list';\nimport './js/services/mobile-menu';\n"],"names":["parcelRequire"],"version":3,"file":"shopping-list.3bfdd9a0.js.map"}
