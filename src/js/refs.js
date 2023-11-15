@@ -24,4 +24,8 @@ export const refs = {
 	modalCloseBtn: document.querySelector('.modal-book__close-btn'),
 	modalSwitchBtn: document.querySelector('.modal-book__switch-storage-btn'),
 	modalPurchaseText: document.querySelector('.modal-book__purchase-text'),
+
+	// Shopping list
+	emptyContent: document.querySelector('.empty-content'),
+	shoppingContentList: document.querySelector('.shopping-content__list'),
 };

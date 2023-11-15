@@ -1,4 +1,4 @@
-import { refs } from '../../refs';
+import { refs } from '../refs';
 import { toggleModal, createModal } from './options-modal';
 
 const { booksContent, modalBackdrop, modalCloseBtn } = refs;

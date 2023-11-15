@@ -1,4 +1,4 @@
-import { getBooks } from '../services/books-api';
+import { getCategoryList } from '../services/books-api';
 import { refs } from '../refs';
 
 const { categoryList } = refs;
@@ -10,7 +10,7 @@ function createMarkup(type) {
 }
 
 async function createItem() {
-	const listNames = await getBooks('category-list');
+	const listNames = await getCategoryList();
 	const typesBooks = listNames.map(({ list_name }) => list_name);
 
 	const categoryItem = typesBooks

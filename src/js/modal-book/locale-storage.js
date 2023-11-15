@@ -1,6 +1,4 @@
-import { refs } from '../../refs';
-
-const { modalSwitchBtn, modalPurchaseText } = refs;
+import { addBtn, removeBtn } from './style-switch-btn';
 
 const LOCALSTORAGE_KEY = 'dates of books';
 const basket = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) ?? [];
@@ -25,16 +23,4 @@ function updateLocalStorage(updatedBasket) {
 	} catch {
 		Notify.failure('Oops! Something went wrong...');
 	}
-}
-
-function removeBtn() {
-	modalSwitchBtn.textContent = 'remove from the shopping list';
-	modalSwitchBtn.classList.add('delete-btn');
-	modalPurchaseText.style.display = 'block';
-}
-
-function addBtn() {
-	modalSwitchBtn.textContent = 'add to shopping list';
-	modalSwitchBtn.classList.remove('delete-btn');
-	modalPurchaseText.style.display = 'none';
 }

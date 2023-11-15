@@ -1,23 +1,169 @@
-.favorite-books {
-	&__empty {
-		margin-top: 80px;
+.empty-content {
+	margin-top: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 14px;
+
+	&__text {
+		max-width: 244px;
+		color: rgba(0, 0, 0, 0.6);
+		text-align: center;
+		font-size: 14px;
+		line-height: 1.29;
+		letter-spacing: -0.02em;
+	}
+
+	&__image {
+		width: 265px;
+		height: 198px;
+	}
+}
+.shopping-content {
+	&__list {
 		display: flex;
-		justify-content: center;
-		align-items: center;
 		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__item {
+		border-radius: 16px;
+		border: 2px solid rgba(79, 46, 232, 0.4);
+		background-color: $white-cl;
+		display: flex;
+		height: 170px;
+		padding: 14px;
 		gap: 14px;
-		&__text {
-			max-width: 244px;
-			color: rgba(0, 0, 0, 0.6);
-			text-align: center;
-			font-size: 14px;
-			line-height: 1.29;
-			letter-spacing: -0.02em;
+		cursor: pointer;
+		transition: all 300ms ease-in-out;
+
+		&:hover {
+			border: 2px solid $yellow-cl;
+		}
+	}
+
+	&__image {
+		width: 100px;
+		height: 142px;
+		border-radius: 8px;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__header-wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 8px;
+	}
+
+	&__title {
+		color: $black-cl;
+		font-weight: 700;
+		line-height: 1.13;
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		margin-right: 4px;
+		margin-bottom: 4px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;
+	}
+
+	&__list-name {
+		color: $grey-cl;
+		font-size: 12px;
+		line-height: 1.17;
+		letter-spacing: 0.03em;
+		overflow: hidden;
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;
+	}
+
+	&__delete-btn {
+		margin-bottom: auto;
+		display: block;
+		background-color: $accent-cl;
+		border-radius: 50%;
+		padding: 6px;
+		width: 28px;
+		height: 28px;
+		transition: all 300ms ease-in-out;
+
+		&:hover {
+			background-color: $yellow-cl;
 		}
 
-		&__image {
-			width: 265px;
-			height: 198px;
+		&:hover .shopping-content__icon-trash {
+			stroke: $black-cl;
 		}
+	}
+
+	&__icon-trash {
+		stroke: $white-cl;
+		fill: none;
+		width: 16px;
+		height: 16px;
+		transition: all 300ms ease-in-out;
+	}
+
+	&__description {
+		color: $black-cl;
+		font-size: 14px;
+		line-height: 1.29;
+		letter-spacing: -0.04em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+	}
+
+	&__bottom-wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-top: auto;
+	}
+
+	&__company-list {
+		display: flex;
+		align-items: flex-end;
+		gap: 8px;
+	}
+
+	&__company-item {
+	}
+
+	&__company-link {
+		&:hover .shopping-content__company-img {
+			filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+			transform: scale(1.1);
+		}
+	}
+
+	&__company-img {
+		filter: grayscale(100%);
+		transition: all 300ms ease-in-out;
+	}
+
+	&__author {
+		color: $grey-cl;
+		font-size: 12px;
+		font-style: italic;
+		line-height: 1.17;
+		letter-spacing: -0.04em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding-right: 2px;
 	}
 }

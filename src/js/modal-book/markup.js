@@ -1,7 +1,7 @@
-import amazon from '../../../images/trading-platform/amazon.webp';
-import amazon2x from '../../../images/trading-platform/amazon@2x.webp';
-import appleBooks from '../../../images/trading-platform/apple-books.webp';
-import appleBooks2x from '../../../images/trading-platform/apple-books@2x.webp';
+import amazon from '../../images/trading-platform/amazon.webp';
+import amazon2x from '../../images/trading-platform/amazon@2x.webp';
+import appleBooks from '../../images/trading-platform/apple-books.webp';
+import appleBooks2x from '../../images/trading-platform/apple-books@2x.webp';
 
 function createLink(links, item) {
 	return links.find(({ name }) => name.toLowerCase() === item).url;

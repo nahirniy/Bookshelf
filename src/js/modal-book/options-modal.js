@@ -1,5 +1,5 @@
-import { refs } from '../../refs';
-import { getBooks } from '../books-api';
+import { refs } from '../refs';
+import { getBookById } from '../services/books-api';
 import { switchStateBtn, toggleBasketBook } from './locale-storage';
 import { createMarkup } from './markup';
 import anime from 'animejs';
@@ -17,9 +17,11 @@ export function toggleModal(state) {
 	modalBook.classList.toggle('is-hidden');
 	body.classList.toggle('overflow-hide');
 
-	isOpen
-		? modalSwitchBtn.addEventListener('click', toggleHandler)
-		: modalSwitchBtn.removeEventListener('click', toggleHandler);
+	if (isOpen) {
+		modalSwitchBtn.addEventListener('click', toggleHandler);
+	} else {
+		modalSwitchBtn.removeEventListener('click', toggleHandler);
+	}
 
 	anime({
 		targets: modalBook,
@@ -31,7 +33,7 @@ export function toggleModal(state) {
 }
 
 export async function createModal(id) {
-	bookDate = await getBooks(id);
+	bookDate = await getBookById(id);
 
 	const currentModal = createMarkup(bookDate);
 	modalBookInfo.innerHTML = currentModal;

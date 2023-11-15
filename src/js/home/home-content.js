@@ -1,4 +1,4 @@
-import { getBooks } from '../services/books-api';
+import { getCurrentBooks, getTopBooks } from '../services/books-api';
 import { bestsellersMarkup, categoryMarkup } from './markup';
 import { refs } from '../refs';
 import { handleContent } from './helpers';
@@ -6,16 +6,16 @@ import { handleContent } from './helpers';
 const { booksContent, categoryList } = refs;
 
 export async function bestsellersContent() {
-	const bestBooks = await getBooks('top-books');
+	const bestBooks = await getTopBooks();
 
 	const content = bestsellersMarkup(bestBooks, 'Best Sellers Books');
 	booksContent.innerHTML = content;
 }
 
-export async function categoryContent(currentCategory) {
-	const currentBooks = await getBooks(`category?category=${currentCategory}`);
+export async function categoryContent(category) {
+	const currentBooks = await getCurrentBooks(category);
 
-	const content = categoryMarkup(currentBooks, currentCategory);
+	const content = categoryMarkup(currentBooks, category);
 	booksContent.innerHTML = content;
 }
 
