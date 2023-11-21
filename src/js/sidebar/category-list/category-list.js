@@ -1,13 +1,8 @@
-import { getCategoryList } from '../services/books-api';
-import { refs } from '../refs';
+import { getCategoryList } from '../../services/books-api';
+import { refs } from '../../refs';
+import { createMarkup } from './markup';
 
 const { categoryList } = refs;
-
-function createMarkup(type) {
-	return `<li class="category__item">
-    <button class="category__btn" type="button" data-list-name="${type}">${type}</button>
-  </li>`;
-}
 
 async function createItem() {
 	const listNames = await getCategoryList();

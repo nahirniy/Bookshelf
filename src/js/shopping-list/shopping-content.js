@@ -1,3 +1,4 @@
+import { loadFromLS } from '../helpers';
 import { refs } from '../refs';
 import { createMarkup } from './markup';
 import { removeBook } from './remove-book';
@@ -6,7 +7,7 @@ const LOCALSTORAGE_KEY = 'dates of books';
 
 const { emptyContent, shoppingContentList } = refs;
 
-const basket = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) ?? [];
+const basket = loadFromLS(LOCALSTORAGE_KEY) ?? [];
 
 export function shoppingListContent() {
 	if (basket.length !== 0) {

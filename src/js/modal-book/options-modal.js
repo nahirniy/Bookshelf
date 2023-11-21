@@ -1,6 +1,6 @@
 import { refs } from '../refs';
 import { getBookById } from '../services/books-api';
-import { switchStateBtn, toggleBasketBook } from './locale-storage';
+import { switchStateBtn, toggleBasketBook } from './set-basket';
 import { createMarkup } from './markup';
 import anime from 'animejs';
 
