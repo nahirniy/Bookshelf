@@ -21,6 +21,8 @@
 	}
 }
 .shopping-content {
+	margin-bottom: 20px;
+
 	&__list {
 		display: flex;
 		flex-direction: column;
@@ -165,5 +167,90 @@
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		padding-right: 2px;
+	}
+}
+
+.pagination {
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 14px;
+
+	&__btn-wrap {
+		display: flex;
+		gap: 8px;
+	}
+
+	&__button {
+		display: flex;
+		gap: 8px;
+	}
+
+	&__style-btn {
+		width: 38px;
+		height: 38px;
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		color: #000000;
+		transition: all 300ms ease-in-out;
+		border: 1px solid $black-cl;
+
+		&:hover {
+			background-color: $yellow-cl;
+			color: #000000;
+		}
+
+		&:hover .pagination__icon-left {
+			fill: #000000;
+		}
+	}
+
+	&__to-start-btn,
+	&__to-back-btn {
+		background-color: $black-cl;
+	}
+
+	&__to-next-btn,
+	&__to-end-btn {
+		background-color: $yellow-cl;
+		color: #000000;
+
+		&:hover {
+			background-color: transparent;
+		}
+	}
+
+	&__active-btn {
+		background-color: $black-cl;
+		color: $white-cl;
+	}
+
+	&__main-btn {
+		font-family: DM Sans;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 1.22;
+	}
+
+	&__icon-accent {
+		margin-left: -16px;
+	}
+
+	&__icon-left,
+	&__icon-right {
+		fill: $grey-cl;
+		transform: rotate(90deg);
+		width: 22px;
+		height: 22px;
+		transition: all 300ms ease-in-out;
+	}
+
+	&__icon-right {
+		transform: rotate(-90deg);
+		fill: #000000;
 	}
 }

@@ -4,10 +4,9 @@ import { createMarkup } from './markup';
 import { removeBook } from './remove-book';
 
 const LOCALSTORAGE_KEY = 'dates of books';
+const basket = loadFromLS(LOCALSTORAGE_KEY) ?? [];
 
 const { emptyContent, shoppingContentList } = refs;
-
-const basket = loadFromLS(LOCALSTORAGE_KEY) ?? [];
 
 export function shoppingListContent() {
 	if (basket.length !== 0) {
@@ -16,7 +15,8 @@ export function shoppingListContent() {
 		emptyContent.classList.remove('visually-hidden');
 	}
 
-	createMarkup(basket);
+	const currentBasket = basket.slice(0, 4);
+	createMarkup(currentBasket);
 }
 
 shoppingListContent();

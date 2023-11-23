@@ -28,4 +28,6 @@ export const refs = {
 	// Shopping list
 	emptyContent: document.querySelector('.empty-content'),
 	shoppingContentList: document.querySelector('.shopping-content__list'),
+	pagination: document.querySelector('.pagination'),
+	paginationBtnWrap: document.querySelector('.pagination__button'),
 };
