@@ -67,7 +67,6 @@
 		}
 
 		&__title {
-			color: $black-cl;
 			font-weight: 700;
 			line-height: 1.13;
 			letter-spacing: -0.04em;
@@ -123,7 +122,6 @@
 		}
 
 		&__description {
-			color: $black-cl;
 			font-size: 14px;
 			line-height: 1.29;
 			letter-spacing: -0.04em;
@@ -214,10 +212,6 @@
 				background-color: $yellow-cl;
 				color: #000000;
 			}
-
-			&:hover .pagination__icon-left {
-				fill: #000000;
-			}
 		}
 
 		&__arrow-btn {
@@ -234,7 +228,6 @@
 		}
 
 		&__main-btn {
-			font-family: DM Sans;
 			font-size: 18px;
 			font-weight: 700;
 			line-height: 1.22;

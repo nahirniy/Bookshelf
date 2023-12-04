@@ -1,0 +1,200 @@
+.dark {
+	background-color: #202024;
+
+	.header {
+		border: 1.5px solid $white-cl;
+		background-color: $black-cl;
+
+		&__main-logo-text {
+			fill: #f3f3f3;
+		}
+
+		.menu-link {
+			color: $white-cl;
+
+			&:hover {
+				color: $black-cl;
+			}
+		}
+
+		.current-link {
+			color: $black-cl;
+
+			.menu-icon-shop {
+				fill: $black-cl;
+			}
+		}
+
+		.shopping-link {
+			&:hover .menu-icon-shop {
+				fill: $black-cl;
+			}
+		}
+
+		.menu-icon-shop {
+			fill: $white-cl;
+		}
+
+		&__mobile-menu-btn {
+			&__icon {
+				stroke: $white-cl;
+			}
+		}
+	}
+
+	.aside {
+		.category {
+			&__list {
+				scrollbar-color: rgba(17, 17, 17, 0.6) transparent;
+
+				&::-webkit-scrollbar-thumb {
+					background-color: rgba(17, 17, 17, 0.6);
+				}
+			}
+
+			&__item .active {
+				color: $yellow-cl;
+			}
+
+			&__btn {
+				color: rgba(255, 255, 255, 0.6);
+
+				&:hover,
+				&:focus {
+					color: $yellow-cl;
+				}
+			}
+		}
+	}
+
+	.books {
+		&__title {
+			color: $white-cl;
+		}
+
+		&__title-book {
+			color: $white-cl;
+		}
+
+		&__bestsellers {
+			&__btn {
+				color: $white-cl;
+			}
+		}
+	}
+
+	.modal-book {
+		border: 2px solid $white-cl;
+		background-color: #202024;
+
+		&__close-icon {
+			stroke: $white-cl;
+		}
+
+		&__title {
+			color: $white-cl;
+		}
+
+		&__description {
+			color: $white-cl;
+		}
+
+		&__link {
+			&:hover .modal-book__img-company {
+				filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+			}
+		}
+
+		&__amazon-img {
+			filter: brightness(0) invert(1);
+		}
+
+		&__apple-books-img {
+			filter: grayscale(100%);
+		}
+
+		&__switch-storage-btn {
+			color: $white-cl;
+		}
+
+		&__purchase-text {
+			color: rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	.empty-content {
+		&__text {
+			color: rgba(255, 255, 255, 0.6);
+		}
+	}
+
+	.shopping-content {
+		&__item {
+			background-color: $black-cl;
+		}
+
+		&__title {
+			color: $white-cl;
+		}
+
+		&__description {
+			color: $white-cl;
+		}
+
+		&__company-link {
+			&:hover .shopping-content__company-img {
+				filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+			}
+		}
+
+		&__amazon-img {
+			filter: brightness(0) invert(1);
+		}
+
+		&__apple-books-img {
+			filter: grayscale(100%);
+		}
+	}
+
+	.pagination {
+		&__style-btn {
+			color: $white-cl;
+			border: 1px solid $white-cl;
+
+			&:hover {
+				background-color: $white-cl;
+			}
+		}
+
+		&__arrow-btn {
+			background-color: $yellow-cl;
+			border: 1px solid $black-cl;
+
+			&:hover {
+				background-color: transparent;
+				border: 1px solid $white-cl;
+			}
+
+			&:hover .pagination__icon {
+				fill: $white-cl;
+			}
+		}
+
+		&__active-btn {
+			background-color: $white-cl;
+			color: $black-cl;
+		}
+
+		&__disabled-btn {
+			background-color: $black-cl;
+
+			&:hover {
+				pointer-events: none;
+			}
+
+			.pagination__icon {
+				fill: $white-cl;
+			}
+		}
+	}
+}

@@ -2,12 +2,12 @@
 	padding-bottom: 80px;
 
 	&__title {
-		color: $black-cl;
 		font-size: 32px;
 		line-height: 1.19;
 		letter-spacing: -0.04em;
 		text-align: left;
 		margin-bottom: 40px;
+		transition: color 300ms ease-in-out;
 
 		&__accent {
 			color: $accent-cl;
@@ -60,6 +60,8 @@
 		position: absolute;
 		text-align: center;
 		transition: all 300ms ease-in-out;
+		transform: translateY(-70px);
+		opacity: 0;
 	}
 
 	&__category {
@@ -73,7 +75,7 @@
 		max-width: 335px;
 
 		&:hover .books__overley {
-			transform: translateY(-70px);
+			opacity: 1;
 		}
 	}
 

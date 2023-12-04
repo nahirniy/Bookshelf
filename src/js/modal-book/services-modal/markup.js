@@ -26,7 +26,7 @@ export function createMarkup(bookDate) {
 		            <li class="modal-book__item">
 						<a href="${amazonLink}" class="modal-book__link" target="_blank">
 					    	<img
-								class="modal-book__img-company"
+								class="modal-book__img-company modal-book__amazon-img"
 								srcset="${amazon} 1x, ${amazon2x} 2x"
 		        				src="${amazon}"
 		        				alt="Amazon"
@@ -39,7 +39,7 @@ export function createMarkup(bookDate) {
 			        <li class="modal-book__item">
 						<a href="${appleBooksLink}" class="modal-book__link" target="_blank">
 							<img
-								class="modal-book__img-company"
+								class="modal-book__img-company modal-book__apple-books-img"
 								srcset="${appleBooks} 1x, ${appleBooks2x} 2x"
 		        				src="${appleBooks}"
 		        				alt="Apple books"

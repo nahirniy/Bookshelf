@@ -7,6 +7,7 @@
 	max-width: 1440px;
 	position: relative;
 	z-index: 998;
+	transition: background-color 300ms ease-in-out;
 
 	& .container {
 		display: flex;
@@ -26,7 +27,6 @@
 		align-items: center;
 		justify-content: center;
 		gap: 24px;
-		color: $black-cl;
 		font-size: 14px;
 		font-weight: 500;
 		line-height: 1.29;
