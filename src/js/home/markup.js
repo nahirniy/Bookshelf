@@ -39,13 +39,16 @@ function createCard(book) {
 	const { _id, book_image, book_image_width, book_image_height, publisher, title } = book;
 
 	return `<li class="books__item" data-id="${_id}">
-        <img
-            class="books__image"
-            src="${book_image}" 
-                width="${book_image_width}" 
-                height="${book_image_height}"
-                loading="lazy"
-            />
+        <div class="books__overley-box">
+            <img
+                class="books__image"
+                src="${book_image}" 
+                    width="${book_image_width}" 
+                    height="${book_image_height}"
+                    loading="lazy"
+                />
+            <div class="books__overley">quick view</div>
+        </div>
         <h4 class="books__title-book">${title}</h4>
         <span class="books__author">${publisher}</span>
     </li>`;
