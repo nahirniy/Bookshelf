@@ -8,6 +8,7 @@ export const refs = {
 	mobileMenuList: document.querySelector('.mobile-menu__list'),
 	mobileMenuIcon: document.querySelector('.header__mobile-menu-btn__icon'),
 	toggleTheme: document.querySelector('.header__checkbox'),
+	moveCircle: document.querySelector('.header__switcher'),
 
 	// Sidebar
 	categoryList: document.querySelector('.category__list'),

@@ -58,6 +58,11 @@
 			width: 18px;
 			height: 18px;
 			border-radius: 50%;
+		}
+	}
+
+	.animation {
+		&::before {
 			transition: all 300ms ease-in-out;
 		}
 	}

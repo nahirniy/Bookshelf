@@ -18,13 +18,11 @@ if (screenSize >= 768) {
 const { emptyContent, shoppingContentList, pagination } = refs;
 
 export function shoppingListContent(updateBasket) {
-	if (updateBasket.length !== 0) {
-		emptyContent.classList.add('visually-hidden');
-		pagination.classList.remove('visually-hidden');
-	} else {
-		emptyContent.classList.remove('visually-hidden');
-		pagination.classList.add('visually-hidden');
-	}
+	const showContent = updateBasket.length !== 0;
+	const showPagination = currentBasket.length < updateBasket.length;
+
+	emptyContent.classList.toggle('visually-hidden', showContent);
+	pagination.classList.toggle('visually-hidden', !showPagination);
 }
 
 shoppingListContent(basket);
