@@ -1,10 +1,13 @@
-import { saveToLS } from '../helpers';
+import { loadFromLS, saveToLS } from '../helpers';
+import { refs } from '../refs';
+import { changePage, updatePagination } from './pagination/pagination';
 import { shoppingListContent } from './shopping-content';
 
 const LOCALSTORAGE_KEY = 'dates of books';
 
-export function removeBook(e, basket) {
+export function removeBook(e) {
 	const currentBtn = e.target.closest('.shopping-content__delete-btn');
+	const basket = loadFromLS(LOCALSTORAGE_KEY) ?? [];
 
 	if (!currentBtn) {
 		return;
@@ -14,7 +17,8 @@ export function removeBook(e, basket) {
 
 	findBook(bookId, basket);
 	saveToLS(LOCALSTORAGE_KEY, basket);
-	shoppingListContent();
+	shoppingListContent(basket);
+	updatePagination(basket);
 }
 
 function findBook(id, basket) {

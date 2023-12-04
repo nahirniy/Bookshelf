@@ -35,99 +35,39 @@
 		flex-direction: column;
 	}
 
-	&__sing-up {
-		background-color: $accent-cl;
-		color: $white-cl;
-		max-width: 184px;
-		margin-bottom: 126px;
-		display: flex;
-		gap: 90px;
-		padding: 14px 15px;
-		align-items: center;
-
-		&:hover {
-			background-color: $white-cl;
-			color: $black-cl;
-		}
-	}
-
-	&__log-out {
-		background-color: $white-cl;
-		color: $black-cl;
-		margin-top: auto;
-		display: flex;
-		gap: 4px;
-		align-items: center;
-		padding: 15px 24px;
-		max-width: 118px;
-
-		&:hover {
-			background-color: $accent-cl;
-			color: $white-cl;
-		}
-	}
-
-	&__icon-arrow-right {
-		stroke: $yellow-cl;
-	}
-
 	&__list {
 		display: flex;
 		flex-direction: column;
 		margin: 0 auto;
 		gap: 8px;
-	}
-
-	&__item {
 		font-size: 14px;
 		line-height: 1.29;
 		letter-spacing: -0.04em;
 		text-transform: uppercase;
 	}
 
-	.current-link {
-		background-color: $yellow-cl;
-		font-weight: 700;
-		color: $black-cl;
-
-		.mobile-menu__icon-shop {
-			fill: $black-cl;
-		}
+	.sing-up-btn {
+		margin-bottom: 126px;
 	}
 
-	&__link {
-		padding: 8px 16px;
-		border-radius: 36px;
-		font-weight: 500;
-		transition: all 300ms ease-in-out;
+	.menu-link {
 		color: $white-cl;
 
-		&:hover,
-		&:active {
+		&:hover {
 			color: $black-cl;
-			background-color: $yellow-cl;
 		}
 	}
 
-	.home-link {
-		display: block;
-		max-width: 72px;
-	}
+	.current-link {
+		color: $black-cl;
 
-	.shopping-link {
-		display: flex;
-		gap: 4px;
-		align-items: center;
-		margin-left: -16px;
-
-		&:hover .mobile-menu__icon-shop {
+		.menu-icon-shop {
 			fill: $black-cl;
 		}
 	}
 
-	&__icon-shop {
+	.menu-icon-shop {
 		fill: $white-cl;
-		transition: all 300ms ease-in-out;
 	}
 }
 

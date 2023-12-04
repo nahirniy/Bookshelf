@@ -6,9 +6,8 @@
 		font-size: 32px;
 		line-height: 1.19;
 		letter-spacing: -0.04em;
-		text-align: center;
+		text-align: left;
 		margin-bottom: 40px;
-		margin-top: 40px;
 
 		&__accent {
 			color: $accent-cl;
@@ -29,6 +28,10 @@
 		letter-spacing: -0.04em;
 		text-transform: uppercase;
 		margin-bottom: 4px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 100%;
 	}
 
 	&__author {
@@ -47,6 +50,7 @@
 
 	&__item {
 		cursor: pointer;
+		max-width: 335px;
 	}
 
 	&__bestsellers {
@@ -88,6 +92,77 @@
 			&:focus {
 				background-color: $accent-cl;
 				color: $white-cl;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.books {
+		&__title {
+			font-size: 48px;
+			line-height: 1.08;
+			letter-spacing: -0.04em;
+		}
+
+		&__image {
+			width: 218px;
+			height: 316px;
+		}
+
+		&__category {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 40px 25px;
+		}
+
+		&__item {
+			max-width: 218px;
+		}
+
+		&__bestsellers {
+			&__list {
+				display: flex;
+				gap: 25px;
+				margin-bottom: 20px;
+			}
+
+			.books__item {
+				display: none;
+			}
+
+			.books__item:nth-child(-n + 3) {
+				display: block;
+			}
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.books {
+		&__image {
+			width: 180px;
+			height: 256px;
+		}
+
+		&__category {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 40px 24px;
+		}
+
+		&__item {
+			max-width: 180px;
+		}
+
+		&__bestsellers {
+			&__list {
+				gap: 24px;
+				margin-bottom: 32px;
+			}
+
+			.books__item:nth-child(-n + 5) {
+				display: block;
 			}
 		}
 	}

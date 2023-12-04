@@ -1,71 +1,75 @@
-<div class="container">
-	<h2 class="books__title">
-		Shopping
-		<span class="books__title__accent">List</span>
-	</h2>
-	<div class="empty-content">
-		<p class="empty-content__text">This page is empty, add some books and proceed to order.</p>
-		<img
-			class="empty-content__image"
-			srcset="./images/shopping-list/books.webp 1x, ./images/shopping-list/books@2x.webp 2x"
-			src="./images/shopping-list/books.webp"
-			alt="books"
-		/>
-	</div>
-	<div class="shopping-content">
-		<ul class="shopping-content__list">
-			<!-- Created markup from js -->
-		</ul>
-	</div>
-	<div class="pagination">
-		<div class="pagination__btn-wrap">
-			<button
-				type="button"
-				class="pagination__to-start-btn pagination__style-btn"
-				data-page="first-page"
-			>
-				<svg class="pagination__icon-left">
-					<use href="./images/icons/icons.svg#icon-arrow"></use>
-				</svg>
-				<svg class="pagination__icon-left pagination__icon-accent">
-					<use href="./images/icons/icons.svg#icon-arrow"></use>
-				</svg>
-			</button>
-			<button
-				type="button"
-				class="pagination__to-back-btn pagination__style-btn"
-				data-page="prev-page"
-			>
-				<svg class="pagination__icon-left">
-					<use href="./images/icons/icons.svg#icon-arrow"></use>
-				</svg>
-			</button>
+<section>
+	<div class="container shopping-list">
+		<h2 class="books__title">
+			Shopping
+			<span class="books__title__accent">List</span>
+		</h2>
+		<div class="empty-content">
+			<p class="empty-content__text">
+				This page is empty, add some books and proceed to order.
+			</p>
+			<img
+				class="empty-content__image"
+				srcset="./images/shopping-list/books.webp 1x, ./images/shopping-list/books@2x.webp 2x"
+				src="./images/shopping-list/books.webp"
+				alt="books"
+			/>
 		</div>
-		<div class="pagination__button">
-			<!-- Created button form JS -->
+		<div class="shopping-content">
+			<ul class="shopping-content__list">
+				<!-- Created markup from js -->
+			</ul>
 		</div>
-		<div class="pagination__btn-wrap">
-			<button
-				type="button"
-				class="pagination__to-next-btn pagination__style-btn"
-				data-page="next-page"
-			>
-				<svg class="pagination__icon-right">
-					<use href="./images/icons/icons.svg#icon-arrow"></use>
-				</svg>
-			</button>
-			<button
-				type="button"
-				class="pagination__to-end-btn pagination__style-btn"
-				data-page="last-page"
-			>
-				<svg class="pagination__icon-right">
-					<use href="./images/icons/icons.svg#icon-arrow"></use>
-				</svg>
-				<svg class="pagination__icon-right pagination__icon-accent">
-					<use href="./images/icons/icons.svg#icon-arrow"></use>
-				</svg>
-			</button>
+		<div class="pagination">
+			<div class="pagination__btn-wrap">
+				<button
+					type="button"
+					class="pagination__arrow-btn pagination__style-btn"
+					data-page="first-page"
+				>
+					<svg class="pagination__icon pagination__icon-left">
+						<use href="./images/icons/icons.svg#icon-arrow"></use>
+					</svg>
+					<svg class="pagination__icon pagination__icon-left pagination__icon-accent">
+						<use href="./images/icons/icons.svg#icon-arrow"></use>
+					</svg>
+				</button>
+				<button
+					type="button"
+					class="pagination__arrow-btn pagination__style-btn"
+					data-page="prev-page"
+				>
+					<svg class="pagination__icon pagination__icon-left">
+						<use href="./images/icons/icons.svg#icon-arrow"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="pagination__button">
+				<!-- Created button form JS -->
+			</div>
+			<div class="pagination__btn-wrap">
+				<button
+					type="button"
+					class="pagination__arrow-btn pagination__style-btn"
+					data-page="next-page"
+				>
+					<svg class="pagination__icon pagination__icon-right">
+						<use href="./images/icons/icons.svg#icon-arrow"></use>
+					</svg>
+				</button>
+				<button
+					type="button"
+					class="pagination__arrow-btn pagination__style-btn"
+					data-page="last-page"
+				>
+					<svg class="pagination__icon pagination__icon-right">
+						<use href="./images/icons/icons.svg#icon-arrow"></use>
+					</svg>
+					<svg class="pagination__icon pagination__icon-right pagination__icon-accent">
+						<use href="./images/icons/icons.svg#icon-arrow"></use>
+					</svg>
+				</button>
+			</div>
 		</div>
 	</div>
-</div>
+</section>

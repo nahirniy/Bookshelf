@@ -1,6 +1,7 @@
 import { refs } from '../refs';
 import sprite from '../../images/icons/icons.svg';
 import anime from 'animejs';
+import { activePage } from '../helpers';
 
 const { body, mobileMenuBtn, mobileMenu, mobileMenuIcon } = refs;
 
@@ -34,15 +35,6 @@ function animateIconChange(newHref) {
 			});
 		},
 	});
-}
-
-function activePage() {
-	const activeLink = window.location.pathname;
-	const links = [...document.querySelectorAll('.mobile-menu__link')];
-
-	const currentLink = links.find(link => link.href.includes(activeLink));
-
-	currentLink.classList.add('current-link');
 }
 
 activePage();

@@ -1,19 +1,30 @@
 import { getCategoryList } from '../../services/books-api';
 import { refs } from '../../refs';
 import { createMarkup } from './markup';
+import { Notify } from 'notiflix';
 
 const { categoryList } = refs;
 
 async function createItem() {
-	const listNames = await getCategoryList();
-	const typesBooks = listNames.map(({ list_name }) => list_name);
+	try {
+		const listNames = await getCategoryList();
 
-	const categoryItem = typesBooks
-		.sort((firstType, secondType) => firstType.localeCompare(secondType))
-		.map(type => createMarkup(type))
-		.join('');
+		if (listNames.length === 0) {
+			throw new Error();
+		}
 
-	categoryList.insertAdjacentHTML('beforeend', categoryItem);
+		const typesBooks = listNames.map(({ list_name }) => list_name);
+		const categoryItem = typesBooks
+			.sort((firstType, secondType) => firstType.localeCompare(secondType))
+			.map(type => createMarkup(type))
+			.join('');
+
+		categoryList.insertAdjacentHTML('beforeend', categoryItem);
+	} catch (err) {
+		Notify.failure('Oops! Something went wrong...');
+		console.error(err);
+	}
+
 	categoryList.scrollTop = 0;
 }
 

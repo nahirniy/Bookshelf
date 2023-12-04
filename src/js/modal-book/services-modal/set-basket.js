@@ -1,4 +1,4 @@
-import { loadFromLS, removeBtn, saveToLS, addBtn } from '../helpers';
+import { loadFromLS, removeBtn, saveToLS, addBtn } from '../../helpers';
 
 const LOCALSTORAGE_KEY = 'dates of books';
 const basket = loadFromLS(LOCALSTORAGE_KEY) ?? [];

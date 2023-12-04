@@ -1,8 +1,9 @@
-import { refs } from '../refs';
-import { getBookById } from '../services/books-api';
+import { refs } from '../../refs';
+import { getBookById } from '../../services/books-api';
 import { switchStateBtn, toggleBasketBook } from './set-basket';
 import { createMarkup } from './markup';
 import anime from 'animejs';
+import { Notify } from 'notiflix';
 
 const { body, modalBackdrop, modalBook, modalBookInfo, modalSwitchBtn } = refs;
 
@@ -33,10 +34,17 @@ export function toggleModal(state) {
 }
 
 export async function createModal(id) {
-	bookDate = await getBookById(id);
+	try {
+		bookDate = await getBookById(id);
 
-	const currentModal = createMarkup(bookDate);
-	modalBookInfo.innerHTML = currentModal;
+		const currentModal = createMarkup(bookDate);
+		modalBookInfo.innerHTML = currentModal;
 
-	switchStateBtn(bookDate);
+		switchStateBtn(bookDate);
+	} catch (err) {
+		Notify.failure('Oops! Something went wrong...');
+		console.error(err);
+
+		toggleModal('close');
+	}
 }

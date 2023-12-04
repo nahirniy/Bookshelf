@@ -34,6 +34,7 @@ body {
 	background-color: $main-cl;
 	font-size: 16px;
 	font-weight: 400;
+	color: $black-cl;
 }
 
 ul {
@@ -96,6 +97,38 @@ address {
 	overflow: hidden;
 }
 
+.sing-up-btn {
+	background-color: $accent-cl;
+	color: $white-cl;
+	max-width: 184px;
+	display: flex;
+	gap: 90px;
+	padding: 14px 15px;
+	align-items: center;
+
+	&:hover {
+		background-color: $white-cl;
+		color: $black-cl;
+	}
+}
+
+.log-out-btn {
+	background-color: $white-cl;
+	color: $black-cl;
+	margin-top: auto;
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	padding: 15px 24px;
+	max-width: 118px;
+	display: none;
+
+	&:hover {
+		background-color: $accent-cl;
+		color: $white-cl;
+	}
+}
+
 .style-btn {
 	border-radius: 18px;
 	border: 1.5px solid $black-cl;
@@ -105,4 +138,75 @@ address {
 	letter-spacing: -0.04em;
 	transition: all 300ms ease-in-out;
 	white-space: nowrap;
+}
+
+.menu-link {
+	padding: 8px 16px;
+	border-radius: 36px;
+	font-weight: 500;
+	transition: all 300ms ease-in-out;
+
+	&:hover,
+	&:active {
+		color: $black-cl;
+		background-color: $yellow-cl;
+	}
+}
+
+.current-link {
+	background-color: $yellow-cl;
+	font-weight: 700;
+	color: $black-cl;
+
+	.menu-icon-shop {
+		fill: $black-cl;
+	}
+}
+
+.home-link {
+	display: block;
+	max-width: 72px;
+}
+
+.shopping-link {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	margin-left: -16px;
+
+	&:hover .menu-icon-shop {
+		fill: $black-cl;
+	}
+}
+
+.menu-icon-shop {
+	fill: $black-cl;
+	transition: all 300ms ease-in-out;
+}
+
+.menu-icon-arrow-right {
+	stroke: $yellow-cl;
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 768px;
+		padding: 0 32px;
+	}
+}
+
+@media (min-width: 1440px) {
+	main {
+		display: flex;
+		gap: 40px;
+		margin: 0 auto;
+		max-width: 1440px;
+		padding: 40px 24px;
+		justify-content: space-between;
+	}
+
+	.container {
+		max-width: 996px;
+		padding: 0;
+	}
 }

@@ -1,5 +1,5 @@
 import { refs } from '../refs';
-import { toggleModal, createModal } from './options-modal';
+import { toggleModal, createModal } from './services-modal/options-modal';
 
 const { booksContent, modalBackdrop, modalCloseBtn } = refs;
 

@@ -1,16 +1,15 @@
 import { loadFromLS } from '../../helpers';
 import { refs } from '../../refs';
 import { createMarkup } from '../markup';
-import { shoppingListContent } from '../shopping-content';
 import { createButton } from './markup-button';
 
 const { pagination, paginationBtnWrap } = refs;
 let currentPage = 1;
 
 const LOCALSTORAGE_KEY = 'dates of books';
-const basket = loadFromLS(LOCALSTORAGE_KEY) ?? [];
+const screenSize = window.innerWidth;
 
-function handleNavigate(e) {
+function handlePagination(e) {
 	const currentBtn = e.target.closest('button');
 
 	if (!currentBtn) {
@@ -19,55 +18,91 @@ function handleNavigate(e) {
 
 	const page = currentBtn.dataset.page;
 
-	switchPage(page);
+	updatePage(page);
 }
 
-function switchPage(page) {
-	const amountBtn = paginationBtnWrap.childElementCount;
+export function updatePagination(basket) {
+	const activeBtn = paginationBtnWrap.querySelector('.pagination__active-btn');
+	const currentPage = Number(activeBtn.dataset.page);
+	let totalPages;
 
+	if (screenSize >= 768) {
+		totalPages = Math.ceil(basket.length / 3);
+	} else {
+		totalPages = Math.ceil(basket.length / 4);
+	}
+
+	if (currentPage > totalPages) {
+		changePage(totalPages);
+	} else {
+		changePage(currentPage);
+	}
+}
+
+function updatePage(page) {
+	const amountBtn = paginationBtnWrap.childElementCount;
+	const updateBasket = loadFromLS(LOCALSTORAGE_KEY) ?? [];
+	const thisPage = Number(page);
 	const firstPage = 1;
-	const prevPage = currentPage - 1;
-	const morePage = amountBtn;
-	const nextPage = currentPage + 1;
-	const lastPage = Math.ceil(basket.length / 4);
+	let morePage;
+	let lastPage;
+
+	if (screenSize >= 768) {
+		lastPage = Math.ceil(updateBasket.length / 3);
+		morePage = currentPage + amountBtn;
+	} else {
+		lastPage = Math.ceil(updateBasket.length / 4);
+		morePage = currentPage + amountBtn - 1;
+	}
+
+	let targetPage;
 
 	switch (page) {
 		case 'first-page':
-			changePage(firstPage);
+			targetPage = firstPage;
 			break;
 		case 'prev-page':
-			changePage(prevPage);
+			targetPage = currentPage - 1;
 			break;
 		case 'more-page':
-			changePage(morePage);
+			targetPage = morePage > lastPage ? lastPage : morePage;
+			console.log(morePage);
 			break;
 		case 'next-page':
-			changePage(nextPage);
+			targetPage = currentPage + 1;
 			break;
 		case 'last-page':
-			changePage(lastPage);
+			targetPage = lastPage;
 			break;
 		default:
-			changePage(page);
+			targetPage = thisPage;
 			break;
 	}
-}
 
-function changePage(page) {
-	const thisPage = Number(page);
-	const lastPage = Math.ceil(basket.length / 4);
-	const startIndex = (thisPage - 1) * 4;
-	const currentBasket = basket.slice(startIndex, startIndex + 4);
-
-	if (thisPage < 1 || thisPage > lastPage || thisPage === currentPage) {
+	if (targetPage < 1 || targetPage > lastPage || targetPage === currentPage) {
 		return;
 	}
 
+	changePage(targetPage);
+}
+
+export function changePage(page) {
+	const updateBasket = loadFromLS(LOCALSTORAGE_KEY) ?? [];
+	let startIndex;
+	let currentBasket;
+
+	if (screenSize >= 768) {
+		startIndex = (page - 1) * 3;
+		currentBasket = updateBasket.slice(startIndex, startIndex + 3);
+	} else {
+		startIndex = (page - 1) * 4;
+		currentBasket = updateBasket.slice(startIndex, startIndex + 4);
+	}
+
 	createMarkup(currentBasket);
-	createButton(basket, thisPage);
+	createButton(updateBasket, page);
 
 	currentPage = page;
 }
 
-createButton(basket);
-pagination.addEventListener('click', handleNavigate);
+pagination.addEventListener('click', handlePagination);

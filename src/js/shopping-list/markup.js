@@ -33,6 +33,9 @@ export function createMarkup(basket) {
                     </div>
                     <p class="shopping-content__description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo facere quibusdam
+                        necessitatibus ex odio quaerat mollitia modi minima.Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Dolorem quo facere quibusdam necessitatibus ex odio quaerat mollitia modi
+                        minima.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quo facere quibusdam
                         necessitatibus ex odio quaerat mollitia modi minima
                     </p>
                     <div class="shopping-content__bottom-wrapper">
@@ -41,12 +44,10 @@ export function createMarkup(basket) {
                             <li class="shopping-content__company-item">
                                 <a href="${amazonLink}" class="shopping-content__company-link" target="_blank">
                                     <img
-                                        class="shopping-content__company-img"
+                                        class="shopping-content__company-img shopping-content__amazon-img"
                                         srcset="${amazon} 1x, ${amazon2x} 2x"
                                         src="${amazon}"
                                         alt="Amazon"
-                                        width="32"
-                                        height="11"
                                         loading="lazy"
                                     />
                                 </a>
@@ -54,12 +55,10 @@ export function createMarkup(basket) {
                             <li class="shopping-content__company-item">
                                 <a href="${appleBooksLink}" class="shopping-content__company-link" target="_blank">
                                     <img
-                                        class="shopping-content__company-img"
+                                        class="shopping-content__company-img shopping-content__apple-books-img"
                                         srcset="${appleBooks} 1x, ${appleBooks2x} 2x"
                                         src="${appleBooks}"
                                         alt="Apple books"
-                                        width="16"
-                                        height="16"
                                         loading="lazy"
                                     />
                                 </a>

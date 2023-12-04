@@ -3,10 +3,12 @@
 	padding: 0 20px;
 	margin: 0 auto;
 	padding-top: 40px;
+	margin-bottom: 40px;
 }
 
 .category {
 	margin-bottom: 40px;
+	width: 327px;
 
 	&__list {
 		display: flex;
@@ -15,6 +17,7 @@
 		max-height: 228px;
 		overflow-y: auto;
 		scrollbar-color: #e0e0e0 transparent;
+		padding-right: 20px;
 
 		&::-webkit-scrollbar {
 			width: 8px;
@@ -43,6 +46,10 @@
 		letter-spacing: -0.02em;
 		text-align: left;
 		transition: color 300ms ease-in-out;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 100%;
 
 		&:hover,
 		&:focus {
@@ -129,5 +136,75 @@
 
 	&__icon-arrow {
 		fill: $accent-cl;
+		width: 20px;
+		height: 20px;
+	}
+}
+
+@media (min-width: 768px) {
+	.aside {
+		max-width: 768px;
+		padding: 40px 32px 0;
+		display: flex;
+		gap: 32px;
+		margin-bottom: 100px;
+	}
+
+	.category {
+		margin-bottom: 0;
+		font-size: 18px;
+		line-height: 1.33;
+		width: 337px;
+
+		&__list {
+			gap: 32px;
+			max-height: 472px;
+
+			&::-webkit-scrollbar-thumb {
+				height: 167px;
+			}
+		}
+	}
+
+	.support {
+		width: 335px;
+		height: 474px;
+		padding: 26px 40px 24px 40px;
+
+		&__header {
+			font-size: 24px;
+			line-height: 1.17;
+		}
+
+		&__list {
+			margin-bottom: 24px;
+		}
+
+		&__btn {
+			width: 38px;
+			height: 38px;
+		}
+
+		&__icon-arrow {
+			width: 22px;
+			height: 22px;
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.aside {
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+	}
+
+	.category {
+		width: 356px;
+		margin-bottom: 86px;
+	}
+
+	.support {
+		width: 356px;
 	}
 }

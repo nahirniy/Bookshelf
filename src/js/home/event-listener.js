@@ -1,5 +1,5 @@
 import { changeActiveCategory } from '../helpers';
-import { categoryContent } from './home-content';
+import { bestsellersContent, categoryContent } from './home-content';
 
 let prevCategory = '';
 
