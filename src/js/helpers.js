@@ -13,6 +13,8 @@ export function activePage() {
 		activeLink = path === '/Bookshelf/' ? '/Bookshelf/index.html' : path;
 	} else if (path === '/') {
 		activeLink = path === '/' ? '/index.html' : path;
+	} else {
+		activeLink = path;
 	}
 
 	const links = [...document.querySelectorAll('.menu-link')];
