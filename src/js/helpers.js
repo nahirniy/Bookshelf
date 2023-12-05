@@ -7,8 +7,11 @@ const { categoryList, modalSwitchBtn, modalPurchaseText } = refs;
 
 export function activePage() {
 	const path = window.location.pathname;
+
 	const activeLink = path === '/' ? '/index.html' : path;
 
+	console.log(path);
+	console.log(activeLink);
 	const links = [...document.querySelectorAll('.menu-link')];
 
 	const currentLinks = links.filter(link => link.href.includes(activeLink));
